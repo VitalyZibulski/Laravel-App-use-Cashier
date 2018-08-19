@@ -22,7 +22,7 @@ $factory->define(App\User::class, function (Faker $faker) {
     ];
 });
 
-$factory(App\Post::class, function(Faker $faker){
+$factory->define(App\Post::class, function(Faker $faker){
 	$title = $faker->realText(20);
 	$slug = str_slug($title, '-');
 
@@ -30,7 +30,7 @@ $factory(App\Post::class, function(Faker $faker){
 		'user_id' => function(){return factory(App\User::class)->create()->id;},
 		'title' => $title,
 		'slug' => $slug,
-		'image' => $faker->imageUr(1200, 600,'animals'),
+		'image' => $faker->imageUrl(1200, 600,'animals'),
 		'content' => $faker->paragraphs(10, true),
 		'premium' => rand(0,1)
 	];
