@@ -13,7 +13,7 @@ class SiteController extends Controller
 		return view('pages.home', compact('posts'));
 	}
 
-	public function showPost(){
+	public function showPost($slug){
 		return view('pages.post');
 	}
 }

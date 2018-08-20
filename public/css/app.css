@@ -10577,6 +10577,74 @@ section .section-header h2:after {
   width: 292px;
 }
 
+.card {
+  background: #FFF;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.card .img-container {
+  display: block;
+  background-size: cover;
+  background-position: top center;
+  border-right: no-repeat;
+  min-height: 200px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+
+.post-card {
+  position: relative;
+  margin-bottom: 20px;
+  min-height: 350px;
+}
+
+.post-card h2 {
+  font-size: 24px;
+  margin: 0 0 10px;
+}
+
+.post-card h2 a {
+  color: #424242;
+  -webkit-transition: 0.3s ease all;
+  transition: 0.3s ease all;
+}
+
+.post-card h2 a:hover {
+  color: red;
+  text-decoration: none;
+}
+
+.post-card .card-content {
+  padding: 20px;
+}
+
+.post-card .card-content .byline {
+  font-size: 12px;
+  color: #BBB;
+  margin-bottom: 10px;
+}
+
+.post-card .card-content .price {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-top-right-radius: 3px;
+  border-top-left-radius: 3px;
+  font-size: 14px;
+  padding: 3px 8px;
+  color: #FFF;
+}
+
+.post-card .card-content .price-premium {
+  background: #F42E45;
+}
+
+.post-card .card-content .price-free {
+  background: #02BD70;
+}
+
 .navbar-laravel {
   background-color: #fff;
   -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
