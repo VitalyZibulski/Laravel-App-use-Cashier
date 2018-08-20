@@ -9,13 +9,13 @@
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
 </head>
 <body>
-    <div id="side-header">
+    <div id="site-header">
         @include('partials.header')
     </div>
     <main id="site-main">
         @yield('content')
     </main>
-    <div id="side-footer">
+    <div id="site-footer">
         @include('partials.footer')
     </div>
     <script src="{{asset('js/app.js')}}"></script>

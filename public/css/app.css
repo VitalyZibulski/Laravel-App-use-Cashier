@@ -10471,9 +10471,66 @@ a.text-dark:focus {
   }
 }
 
+#site-header .navbar {
+  border-radius: 0;
+  margin: 0;
+  border: none;
+}
+
+#site-footer {
+  padding-bottom: 30px;
+  padding-top: 30px;
+  background: #333;
+  color: #999;
+  text-align: center;
+}
+
+section {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+section .section-header {
+  text-align: center;
+}
+
+section .section-header h2 {
+  padding-bottom: 20px;
+  padding-top: 20px;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+  color: #AAA;
+  position: relative;
+  letter-spacing: 3px;
+  font-style: italic;
+}
+
+section .section-header h2:before,
+section .section-header h2:after {
+  content: '';
+  display: block;
+  position: absolute;
+  height: 1px;
+  width: 20%;
+  left: 40%;
+  background: #AAA;
+}
+
+section .section-header h2:before {
+  top: 0;
+}
+
+section .section-header h2:after {
+  bottom: 0;
+}
+
 .navbar-laravel {
   background-color: #fff;
   -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
           box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+body {
+  background: #EFEFEF;
 }
 
