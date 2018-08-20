@@ -8,9 +8,6 @@
         <span class="price {{$post->premium ? 'price-premium' : 'price-free'}}">
             {{$post->premium ? 'Premium' : 'Free'}}
         </span>
-
-
-
     </div>
 
 </article>

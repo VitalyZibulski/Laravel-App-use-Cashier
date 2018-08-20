@@ -15,10 +15,20 @@ class Post extends Model
 		'premium'
 	];
 
+	/**
+	 * relation post user
+	 *
+	 * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+	 */
     public function author(){
     	return $this->belongsTo('App\User', 'user_id');
 	}
 
+	/**
+	 * excerpt post content
+	 *
+	 * @return string
+	 */
 	public function getExcerpt(){
     	return str_limit($this->content, 40);
 	}
