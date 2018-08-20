@@ -7,7 +7,7 @@
         <h2>Only $10/mo</h2>
         <div class="cta">
             <p>We promide you won't regret it.</p>
-            <a href="/subscribe">Subscribe</a>
+            <a href="/subscribe" class="btn btn-danger btn-lg">Subscribe</a>
         </div>
     </div>
 </div>
