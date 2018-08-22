@@ -11,8 +11,21 @@
 
 <section class="container">
     <div class="card-padded">
+        @if(Auth::guest())
         <div class="section-header">
             <h2>User info</h2>
+        </div>
+        <div class="form-group">
+            <label>Name</label>
+            <input type="text" class="form-control" name="name">
+        </div>
+        <div class="form-group">
+            <label>Email</label>
+            <input type="email" class="form-control" name="email">
+        </div>
+        <div class="form-group">
+            <label>Password</label>
+            <input type="password" class="form-control" name="password">
         </div>
         <div class="section-header">
             <h2>Subscription info</h2>
@@ -21,5 +34,6 @@
             <h2>Credit card info</h2>
         </div>
     </div>
+    @endif
 </section>
 @endsection
