@@ -10540,6 +10540,40 @@ section .section-header h2:after {
   bottom: 0;
 }
 
+.post-single {
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+
+.post-single .img-container {
+  height: 500px;
+}
+
+.post-single .card-content {
+  padding: 50px 100px;
+}
+
+.post-single .card-content h1 {
+  font-size: 50px;
+  margin: 0 0 20px;
+}
+
+.post-single .card-content .byline {
+  font-size: 14px;
+  color: #BBB;
+  margin-bottom: 20px;
+}
+
+.auth-card {
+  margin-bottom: 50px;
+  margin-top: 50px;
+  padding: 30px;
+}
+
+.auth-card h1 {
+  text-align: center;
+}
+
 .hero {
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(8, 121, 238, 0.9)), to(rgba(8, 121, 238, 0.75))), url(http://placekitten.com/g/900/600) no-repeat top center;
   background: linear-gradient(rgba(8, 121, 238, 0.9), rgba(8, 121, 238, 0.75)), url(http://placekitten.com/g/900/600) no-repeat top center;
