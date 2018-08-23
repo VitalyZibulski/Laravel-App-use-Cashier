@@ -13880,7 +13880,8 @@ module.exports = Cancel;
 
 __webpack_require__(12);
 __webpack_require__(43);
-module.exports = __webpack_require__(45);
+__webpack_require__(45);
+module.exports = __webpack_require__(46);
 
 
 /***/ }),
@@ -47427,6 +47428,29 @@ module.exports = __webpack_amd_options__;
 
 /***/ }),
 /* 45 */
+/***/ (function(module, exports) {
+
+$(document).ready(function () {
+
+    $('#subscribe-form').submit(function (e) {
+        var form = $(this);
+
+        form.find('button').prop('disabled', true);
+
+        Stripe.card.createToken(form, function (status, response) {
+
+            //console.log(val(response.id));
+
+            form.append($('<input type="hidden" name="cc_token">').val(response.id));
+
+            form.get(0).submit();
+        });
+        e.preventDefault();
+    });
+});
+
+/***/ }),
+/* 46 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
