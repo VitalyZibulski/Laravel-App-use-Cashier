@@ -72,6 +72,29 @@
                 <div class="section-header">
                     <h2>Credit Card Info</h2>
                 </div>
+                <div class="form-group row">
+                    <div class="col-xs-8">
+                        <label>Credit Card Number</label>
+                        <input type="text" class="form-control" placeholder="4242 4242 4242 4242">
+                    </div>
+                    <div class="col-xs-4">
+                        <label>CVC</label>
+                        <input type="text" class="form-control" placeholder="123">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-xs-3">
+                        <label>Expiration Month</label>
+                        <input type="text" class="form-control" placeholder="08">
+                    </div>
+                    <div class="col-xs-3">
+                        <label>Expiration Year</label>
+                        <input type="text" class="form-control" placeholder="2020">
+                    </div>
+                </div>
+                <div class="form-group text-center">
+                    <button type="submit" class="btn btn-lg btn-success btn-block">Join</button>
+                </div>
             </form>
         </div>
     </section>
