@@ -2,38 +2,78 @@
 
 @section('content')
 
-<div class="hero">
-    <div class="hero-content">
-        <h1>You're joning!</h1>
-        <h2>Hooray!</h2>
+    <div class="hero">
+        <div class="hero-content">
+            <h1>You're Joining!</h1>
+            <h2>Hooray!</h2>
+        </div>
     </div>
-</div>
 
-<section class="container">
-    <div class="card-padded">
-        @if(Auth::guest())
-        <div class="section-header">
-            <h2>User info</h2>
+    <section class="container">
+        <div class="card card-padded">
+            <form action="/subscribe" method="POST" id="subscribe-form">
+                {!! csrf_field() !!}
+
+                @if (Auth::guest())
+
+                    <div class="section-header">
+                        <h2>User Info</h2>
+                    </div>
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input type="text" class="form-control" name="name">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" class="form-control" name="email">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" class="form-control" name="password">
+                    </div>
+                @endif
+
+                <div class="section-header">
+                    <h2>Subscription Info</h2>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-xs-4">
+                            <div class="subscription-option">
+                                <input type="radio" id="plan-bronze" name="plan" value="bronze" checked>
+                                <label for="plan-bronze">
+                                    <span class="plan-price">$5 <small>/mo</small></span>
+                                    <span class="plan-name">Bronze</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-xs-4">
+                            <div class="subscription-option">
+                                <input type="radio" id="plan-silver" name="plan" value="silver">
+                                <label for="plan-silver">
+                                    <span class="plan-price">$10 <small>/mo</small></span>
+                                    <span class="plan-name">Silver</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-xs-4">
+                            <div class="subscription-option">
+                                <input type="radio" id="plan-gold" name="plan" value="gold">
+                                <label for="plan-gold">
+                                    <span class="plan-price">$15 <small>/mo</small></span>
+                                    <span class="plan-name">Gold</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-header">
+                    <h2>Credit Card Info</h2>
+                </div>
+            </form>
         </div>
-        <div class="form-group">
-            <label>Name</label>
-            <input type="text" class="form-control" name="name">
-        </div>
-        <div class="form-group">
-            <label>Email</label>
-            <input type="email" class="form-control" name="email">
-        </div>
-        <div class="form-group">
-            <label>Password</label>
-            <input type="password" class="form-control" name="password">
-        </div>
-        <div class="section-header">
-            <h2>Subscription info</h2>
-        </div>
-        <div class="section-header">
-            <h2>Credit card info</h2>
-        </div>
-    </div>
-    @endif
-</section>
+    </section>
+
 @endsection

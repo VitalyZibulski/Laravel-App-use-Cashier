@@ -10574,6 +10574,39 @@ section .section-header h2:after {
   text-align: center;
 }
 
+.subscription-option input[type=radio] {
+  display: none;
+}
+
+.subscription-option label {
+  display: block;
+  width: 100%;
+  min-height: 200px;
+  border-radius: 4px;
+  background: #F2F2F2;
+  color: #545454;
+  font-size: 40px;
+  text-align: center;
+  cursor: pointer;
+  padding-top: 50px;
+  -webkit-transition: 0.3s ease all;
+  transition: 0.3s ease all;
+}
+
+.subscription-option .plan-price {
+  font-family: "Oswald", Arial, Helvetica, sans-serif;
+}
+
+.subscription-option .plan-name {
+  display: block;
+  font-size: 24px;
+}
+
+.subscription-option input[type=radio]:checked + label {
+  background: #0B79EE;
+  color: #FFF;
+}
+
 .hero {
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(8, 121, 238, 0.9)), to(rgba(8, 121, 238, 0.75))), url(http://placekitten.com/g/900/600) no-repeat top center;
   background: linear-gradient(rgba(8, 121, 238, 0.9), rgba(8, 121, 238, 0.75)), url(http://placekitten.com/g/900/600) no-repeat top center;
