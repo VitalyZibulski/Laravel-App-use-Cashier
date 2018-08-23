@@ -92,6 +92,7 @@
                         <input type="text" class="form-control" placeholder="2020" data-stripe="exp-year">
                     </div>
                 </div>
+                <div class="stripe-errors"></div>
                 <div class="form-group text-center">
                     <button type="submit" class="btn btn-lg btn-success btn-block">Join</button>
                 </div>

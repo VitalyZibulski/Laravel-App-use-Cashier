@@ -7,11 +7,16 @@ $(document).ready(function() {
 
         Stripe.card.createToken(form, function(status, response) {
 
-                //console.log(val(response.id));
+            if (response.error) {
+                form.find('.stripe-errors').text(response.error.message).addClass('alert alert-danger');
+                form.find('button').prop('disabled', false);
+            } else {
+                console.log(response);
 
                 form.append($('<input type="hidden" name="cc_token">').val(response.id));
 
                 form.get(0).submit();
+            }
             });
             e.preventDefault();
         });
