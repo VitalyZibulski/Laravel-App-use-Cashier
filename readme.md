@@ -1,1 +1,1 @@
-Laravel project
+Laravel project use Stripeq
