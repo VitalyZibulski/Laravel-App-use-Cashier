@@ -93,6 +93,13 @@
                     </div>
                 </div>
                 <div class="stripe-errors"></div>
+                @if (count($errors) > 0)
+                    <div class="alert alert-danger">
+                        @foreach ($errors->all() as $error)
+                            {{ $error }}<br>
+                        @endforeach
+                    </div>
+                @endif
                 <div class="form-group text-center">
                     <button type="submit" class="btn btn-lg btn-success btn-block">Join</button>
                 </div>
