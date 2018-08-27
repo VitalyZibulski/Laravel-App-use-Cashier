@@ -1,6 +1,6 @@
 # Laravel app with subscribe, use Stripe
     
-    Laravel version 5.6
+    Laravel version 5.6, php version 7.1.3
     
 ## Requirements
 
