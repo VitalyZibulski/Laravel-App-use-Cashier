@@ -1,5 +1,5 @@
 <article class="post-card card">
-    <a href="/{{$post->slug}}" class="img-container" style="background-image:url('{{$post->image}}')"></a>
+    <a href="/post/{{$post->slug}}" class="img-container" style="background-image:url('{{$post->image}}')"></a>
 
     <div class="card-content">
         <h2><a href="/{{$post->slug}}">{{$post->title}}</a></h2>
