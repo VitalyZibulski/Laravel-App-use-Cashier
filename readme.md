@@ -1,4 +1,4 @@
-# Laravel app with subscribe
+# Laravel app with subscribe, use Stripe
     
     Laravel version 5.6
     
