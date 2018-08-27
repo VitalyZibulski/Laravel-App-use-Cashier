@@ -14,6 +14,11 @@ Route::post('/subscribe','SubscribeController@processSubscribe');
 
 Route::group(['middleware' => 'auth'], function() {
 	Route::get('welcome', 'SubscribeController@showWelcome')->middleware('subscribed');
+	//account routes
+	Route::get('account', 'AccountController@showAccount');
+	Route::post('account/subscription','AccountController@updateSubscription');
+	Route::post('account/card','AccountController@updateCsrd');
+	Route::delete('account/subscription', 'AccountController@deleteSubscription');
 });
-//account routes
+
 
