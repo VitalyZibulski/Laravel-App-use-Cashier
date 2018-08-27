@@ -13,17 +13,13 @@
     below.
 
 ## Install
-
     $ git clone
     $ npm install
-
 ## Start
-    
     $ php artisan:key:generate
     $ composer install
     $ npm start
     $ php artisan migrate
-
 ## Description
     
     Laravel app with subscribe
