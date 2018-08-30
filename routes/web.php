@@ -18,6 +18,7 @@ Route::group(['middleware' => 'auth'], function() {
 	Route::get('account', 'AccountController@showAccount');
 	Route::post('account/subscription','AccountController@updateSubscription');
 	Route::post('account/card','AccountController@updateCsrd');
+	Route::get('account/invoices/{invoice}','AccountController@downloadInvoice');
 	Route::delete('account/subscription', 'AccountController@deleteSubscription');
 });
 
