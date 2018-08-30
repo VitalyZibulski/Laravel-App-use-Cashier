@@ -24,7 +24,12 @@ class AccountController extends Controller
 
 	public function updateCard(Request $request)
 	{
+		$user = $request->user();
+		$ccToken = $request->input('cc_token');
 
+		$user->updateCard($ccToken);
+
+		return redirect('account')->with(['success' => 'Credit card updated']);
     }
 
 	public function deleteSubscription(Request $request)
