@@ -1,4 +1,4 @@
-# Laravel app with subscribe, use Stripe
+# Laravel app with subscribe, use Stripe, use Cashier
     
     Laravel version 5.6, php version 7.1.3
     
@@ -22,4 +22,4 @@
     $ php artisan migrate
 ## Description
     
-    Laravel app with subscribe
+    Laravel app with subscribe, use Stripe, use Cashier
