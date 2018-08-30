@@ -12,6 +12,12 @@
             <div class="section-header">
                 <h2>Your Subscription</h2>
             </div>
+            @if ($user->subscription('main')->onGracePeriod())
+                <div class="alert alert-danger text-center">
+                    You have cancelled your account.<br>
+                    You have access to Animgalgram until {{ $user->subscription('main')->ends_at->format('F d, Y') }}.
+                </div>
+            @endif
             @if(!  Auth::user()->subscribed('main'))
                 <div class="jumbotron text-center">
                     <p>You don't have a subscription.</p>
@@ -101,9 +107,11 @@
                         <p>No billing history</p>
                     </div>
                 @endif
-            <div class="section-header">
-                <h2>Delete subscription</h2>
+                <form action="/account/subscription" method="POST" class="text-right">
+                    {!! csrf_field() !!}
+                    <input type="hidden" name="_method" value="DELETE">
+                    <button type="submit" class="btn btn-link">Cancel Subscription</button>
+                </form>
             </div>
-        </div>
     </section>
 @endsection
