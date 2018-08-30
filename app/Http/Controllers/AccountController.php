@@ -19,9 +19,22 @@ class AccountController extends Controller
 	public function updateSubscription(Request $request)
 	{
 		$user = $request->user();
-		$plan = $request->input('plan');
-		$user->subscription('main')->swap($plan);
 
+		$plan = $request->input('plan');
+
+		if ($user->subscribed('main') and $user->subscription('main')->onGracePeriod()) {
+			if ($user->onPlan($plan)) {
+
+				$user->subscription('main')->resume();
+			} else {
+
+				$user->subscription('main')->resume()->swap($plan);
+			}
+
+		} else {
+
+			$user->subscription('main')->swap($plan);
+		}
 		return redirect('account')->with(['success' => 'Subscription updated.']);
     }
 
